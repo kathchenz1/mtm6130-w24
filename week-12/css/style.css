@@ -1,0 +1,392 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* --------------------------------
+            Custom Styles
+----------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    margin: 16px 0 8px;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    margin: 14px 0;
+}
+
+i.fa-solid {
+    color: #00ADDB;
+    font-size: 30px;
+}
+
+a, a:visited {
+    color: inherit;
+}
+
+a:hover, a:focus {
+    color: #00ADDB;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 16px;  /* Add padding only to the left and right. */
+}
+
+section {
+    margin-bottom: 80px;
+}
+
+/* ---------------- Header --------------- */
+
+header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.logos {
+    padding: 20px 0;  /* Add padding to the logo section. */
+}
+
+.mobile-logo {
+    width: 100px;
+}
+
+.desktop-logo {
+    display: none;
+}
+
+.banner {
+    position: relative;
+    background-color: gray;
+    height: 600px;
+    background-image: url("../images/mobile-banner.jpg");
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner h1 {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+nav {
+    background-color: beige;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+}
+
+.nav-list li {
+    border-bottom: 1px solid grey;
+}
+
+
+.nav-list li a {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 16px 0;
+}
+
+.nav-list li a.active {
+    color: #00ADDB;
+}
+
+/* Add a hover state for the navigation items */
+.nav-list li a:hover {
+    background-color: #00ADDB;
+    color: beige;
+}
+
+/* ------------ App Section ------------- */
+
+.app-section .btn {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 6px;
+    cursor: pointer;  /* Change the cursor appearance */
+}
+
+.app-section .btn:hover,
+.app-section .btn:focus {
+    background-color: #00ADDB;
+    color: white;
+}
+
+.app-section .content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;   /* Fix the stretch issue of the image. */
+}
+
+.app-section .description {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ------- Actions Section ------- */
+
+.actions-section img {
+    max-width: 100px;
+}
+
+.action-item {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #00ADDB;
+    align-items: center;
+    padding: 20px;
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* --------- News Section --------- */
+
+.news-section .map iframe {
+    width: 100%;
+    height: 450px;
+}
+
+.news-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+/* --------- Newsletter Section --------- */
+
+.newsletter-section {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    background-image: url(../images/desktop-banner.jpg);
+    padding: 40px 20px;
+    
+}
+
+/* --------- Footer --------- */
+
+footer {
+    padding: 20px 0;
+    border-top: 2px solid #00ADDB;
+    background-color: #00ADDB;
+}
+.copyright {
+    text-align: right;
+}
+
+
+
+@media screen and (min-width: 700px) {
+    h1 {
+        font-size: 40px;
+    }
+    
+    h2 {
+        font-size: 32px;
+    }
+    
+    h3 {
+        font-size: 28px;
+    }
+
+    .container {
+        padding: 0 30px;  /* Add padding only to the left and right. */
+    }
+
+
+    /* -------------- Header --------------- */
+
+    header {
+        text-align: left;
+        margin-bottom: 50px;
+    }
+
+    .mobile-logo {
+        display: none;
+    }
+    
+    .desktop-logo {
+        display: inline-block;
+        width: 200px;
+    }
+
+    .banner {
+        background-image: url(../images/desktop-banner.jpg);
+    }
+
+    .banner h1 {
+        color: white;
+    }
+
+    .nav-list {
+        flex-direction: row;
+    }
+    
+    .nav-list li {
+        border-bottom: none;
+        border-right: 1px solid grey;
+        flex-grow: 1;
+    }
+
+    .nav-list li:last-child {
+        border-right: none;
+    }
+    
+    
+    /* --------- App Section --------- */
+
+    .app-section .content {
+        flex-direction: row;
+    }
+
+    .app-section img {
+        width: 400px;
+        margin-right: 60px;
+    }
+    
+    .app-section .description {
+        align-items: flex-start;
+    }
+
+    .app-section .description .btn {
+        align-self: flex-end;
+    }
+    
+    /* --------- Actions Section --------- */
+
+    .action-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .action-item img {
+        margin-right: 20px;
+    }
+    
+    .actions {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .actions .action-item.five {
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 1;
+    }
+
+    .actions .action-item.six {
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 3;
+        grid-row-end: span 1;
+    }
+
+    /* News Section */
+
+    /* Remove the fixed width to ensure that inframes are responsive on tablets. */
+    /* .news-section .map iframe {
+        width: 600px;
+        height: 450px;
+    } */
+
+    .news-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        justify-content: space-between;
+    }
+    
+}
